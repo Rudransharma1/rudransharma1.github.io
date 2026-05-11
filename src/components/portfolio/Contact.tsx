@@ -68,7 +68,7 @@ export function Contact() {
             <form
               onSubmit={(e) => {
                 e.preventDefault();
-                window.location.href = `mailto:hello@rudransh.dev?subject=Contact&body=${encodeURIComponent(msg)}`;
+                window.location.href = `mailto:rudransharma2022@gmail.com?subject=Contact&body=${encodeURIComponent(msg)}`;
               }}
               className="mt-3 flex items-center gap-2"
             >
@@ -93,8 +93,8 @@ export function Contact() {
             <ContactLink
               icon={Mail}
               label="Email"
-              value="hello@rudransh.dev"
-              href="mailto:hello@rudransh.dev"
+              value="rudransharma2022@gmail.com"
+              href="mailto:rudransharma2022@gmail.com"
             />
             <ContactLink
               icon={Linkedin}
