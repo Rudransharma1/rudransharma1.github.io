@@ -12,6 +12,7 @@ const prompts = [
 export function Contact() {
   const [shown, setShown] = useState(0);
   const [msg, setMsg] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
     if (shown < prompts.length) {
@@ -19,6 +20,16 @@ export function Contact() {
       return () => clearTimeout(t);
     }
   }, [shown]);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (msg.trim()) {
+      window.location.href = `mailto:rudransharma2022@gmail.com?subject=Contact&body=${encodeURIComponent(msg)}`;
+      setSubmitted(true);
+      setMsg("");
+      setTimeout(() => setSubmitted(false), 3000);
+    }
+  };
 
   return (
     <section id="contact" className="relative py-32">
@@ -66,10 +77,7 @@ export function Contact() {
             ))}
 
             <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                window.location.href = `mailto:rudransharma2022@gmail.com?subject=Contact&body=${encodeURIComponent(msg)}`;
-              }}
+              onSubmit={handleSubmit}
               className="mt-3 flex items-center gap-2"
             >
               <span className="text-success">›</span>
@@ -78,12 +86,14 @@ export function Contact() {
                 onChange={(e) => setMsg(e.target.value)}
                 placeholder="hi rudransh, let's talk about..."
                 className="flex-1 bg-transparent text-foreground placeholder:text-muted-foreground/50 outline-none"
+                disabled={submitted}
               />
               <button
                 type="submit"
-                className="inline-flex items-center gap-1.5 rounded-md bg-foreground px-3 py-1.5 text-xs font-medium text-background transition-transform hover:scale-[1.03]"
+                disabled={!msg.trim() || submitted}
+                className="inline-flex items-center gap-1.5 rounded-md bg-foreground px-3 py-1.5 text-xs font-medium text-background transition-transform hover:scale-[1.03] disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                send
+                {submitted ? "sent!" : "send"}
                 <Send className="size-3" />
               </button>
             </form>
@@ -100,13 +110,13 @@ export function Contact() {
               icon={Linkedin}
               label="LinkedIn"
               value="/in/rudransh-sharma"
-              href="https://linkedin.com/"
+              href="https://linkedin.com/in/rudransh-sharma"
             />
             <ContactLink
               icon={Github}
               label="GitHub"
               value="@rudransh"
-              href="https://github.com/"
+              href="https://github.com/rudransh"
             />
           </div>
         </motion.div>
