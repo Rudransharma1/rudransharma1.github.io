@@ -1,4 +1,4 @@
-# Quantum Analytics Flow - Portfolio
+# Portfolio 
 
 This is a portfolio project built with React, Vite, and TanStack Start, deployed on GitHub Pages.
 
@@ -34,7 +34,7 @@ bun run preview
 
 The project automatically deploys to GitHub Pages on every push to the `main` branch using GitHub Actions.
 
-**Live URL**: https://[your-github-username].github.io/rudransh-portfolio/
+**Live URL**: https://rudransh-portfolio.rudransharma2022.workers.dev/
 
 ### Manual Deployment (if needed)
 1. Ensure `vite.config.ts` has the correct `base` path: `/rudransh-portfolio/`
