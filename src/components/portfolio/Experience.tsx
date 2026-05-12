@@ -11,9 +11,9 @@ const roles = [
     summary:
       "Owning risk-based reporting and executive dashboards across retail telecom operations.",
     metrics: [
-      { k: "50K+", v: "records cleaned" },
-      { k: "−42%", v: "report turnaround" },
-      { k: "12", v: "live BI dashboards" },
+      { k: "52K+", v: "records cleaned" },
+      { k: "−41%", v: "report turnaround" },
+      { k: "10", v: "live BI dashboards" },
     ],
     series: [38, 42, 41, 55, 60, 58, 72, 78, 84, 81, 92, 96],
   },

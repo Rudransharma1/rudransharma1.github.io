@@ -28,7 +28,7 @@ const timeline = [
   { year: "2021", label: "Foundations — GTU, BTech in CSE" },
   { year: "2022", label: "Universal Roadways — first BI ownership" },
   { year: "2023", label: "PathToCareer — analytics across product & growth" },
-  { year: "2024", label: "Humber College — applied AI / data analytics" },
+  { year: "2024", label: "Humber College — Business Insights and Analytics (Completed)" },
   { year: "2025", label: "Glentel Inc. — risk-based reporting at scale" },
 ];
 
@@ -57,9 +57,12 @@ export function About() {
               className="mt-6 text-muted-foreground md:text-lg"
             >
               Data and BI Analyst with 2+ years across automation, risk-based
-              reporting, and executive analytics. Expert in SQL, Python, and
-              Power BI — cleaning 50K+ records and shipping dashboards
-              decision-makers actually open every morning.
+              reporting, and executive analytics. Completed a Graduate
+              Certificate in Business Insights and Analytics at Humber College
+              in 2024, enhancing skills in data analysis, business intelligence, and
+              decision-making. Expert in SQL, Python, and Power BI — cleaning
+              50K+ records and shipping dashboards decision-makers actually open
+              every morning.
             </motion.p>
 
             {/* timeline */}
@@ -102,6 +105,26 @@ export function About() {
               </motion.div>
             ))}
           </div>
+        </div>
+
+        <div className="mt-12">
+          <motion.h3
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-display text-2xl font-semibold"
+          >
+            Business Insights and Analytics at Humber College
+          </motion.h3>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="mt-4 text-muted-foreground"
+          >
+            This graduate certificate program equips students with practical skills in business, database management, programming, data analysis, interpretation, decision-making, and communications. The program consists of 21 core courses and prepares graduates for roles such as business analytics specialist, data analytics manager, and marketing analyst across various industries including finance, healthcare, and marketing.
+          </motion.p>
         </div>
       </div>
     </section>

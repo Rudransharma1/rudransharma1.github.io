@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Download } from "lucide-react";
 
 const links = [
   { id: "about", label: "About" },
@@ -81,6 +81,15 @@ export function Nav() {
           >
             <Mail className="size-3.5" />
             Contact
+          </a>
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-full bg-foreground px-3 py-1.5 text-xs font-medium text-background transition-transform hover:scale-[1.02]"
+          >
+            <Download className="size-3.5" />
+            Resume
           </a>
         </div>
       </div>
